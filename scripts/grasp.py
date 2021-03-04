@@ -22,7 +22,7 @@ import scipy
 from shapely.geometry import Polygon
 
 import time
-import kinect_subscriber as kinect
+import rs_subscriber as rs
 
 pi     = scipy.pi
 dot    = scipy.dot
@@ -156,7 +156,7 @@ if __name__ == '__main__':
 
     print('Loaded network {:s}'.format(tfmodel))
 
-    image = kinect.get_image(show=False)
+    image = rs.get_image(show=False)
     demo(sess, net, image)
 
     plt.show()
