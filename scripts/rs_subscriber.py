@@ -6,13 +6,13 @@ import numpy as np
 from PIL import Image as PILImage
 from cv_bridge import CvBridge, CvBridgeError
 
-IMAGE_TOPIC = "/camera/rgb/image_color"
-DEPTH_TOPIC = "/camera/depth/image_raw"
+IMAGE_TOPIC = "/ptu_camera/camera/color/image_raw"
+DEPTH_TOPIC = "/ptu_camera/camera/depth/image_raw"
 
 
 def get_image(show=False):
     #print("CALLING GET_KINECT_IMAGE")
-    rospy.init_node("kinect_subscriber")
+    rospy.init_node("rs_subscriber")
     rgb = rospy.wait_for_message(IMAGE_TOPIC, Image)
     depth = rospy.wait_for_message(DEPTH_TOPIC, Image)
 
