@@ -3,3 +3,7 @@ bin
 build
 tools
 output/res50/train/default/*
+
+*.pyc
+
+*.so
